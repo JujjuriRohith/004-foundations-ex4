@@ -11,6 +11,23 @@ float frandom() {
   return ret;
 }
 
+float mc_pi(int dart){
+    int count=0;
+    float x,y;
+    for(int i=0;i<dart;i++){
+        x=frandom();
+        y=frandom();
+        float dist=sqrt(x*x+y*y);
+        if(dist <= 1){
+        count++;
+        }
+    }
+    float pi=count*4.0/dart;
+    //printf("%f\n",pi);
+    return pi;
+}
+
+
 int main(void) {
   float pi0;
   float pi1;
